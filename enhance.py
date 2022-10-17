@@ -28,7 +28,7 @@ def main(
         #     typer.echo(f"Good day Ms. {input}.")
         # else:
         if pipe:
-            output_value = subprocess.run(command, shell=True, capture_output=True, input=json.dumps(input_value),
+            output_value = subprocess.run(command, shell=True, capture_output=True, input=input_value,
                     text=True)
         else:
             final_command = command.replace(replstr, input_value)
